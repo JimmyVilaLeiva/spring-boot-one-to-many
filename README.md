@@ -1,10 +1,21 @@
 # Spring Boot One To Many example with Spring JPA, Hibernate
 Implement Spring JPA One-To-Many mapping with Hibernate in a Spring Boot CRUD example using @ManyToOne annotation
- 
+
 - configure Spring Data, JPA, Hibernate to work with Database
 - define Data Models and Repository interfaces for JPA One-To-Many relationship
 - use Spring JPA to interact with Database for One-To-Many association
 - create Spring Rest Controller to process HTTP requests
+
+
+## Important to mention :
+forked from bezkoder/spring-boot-one-to-many
+
+## Run testing database on mysql
+
+```shell 
+docker run  --name sb-one-to-many -e MYSQL_ROOT_PASSWORD=123456  -e MYSQL_DATABASE=testdb  -e MYSQL_USER=demo -e MYSQL_PASSWORD=123456  -p 3306:3306  -d  mysql:8.0-bullseye
+```
+
 
 For more detail, please visit:
 > [Spring Boot One To Many example with Spring JPA, Hibernate](https://www.bezkoder.com/jpa-one-to-many/)
