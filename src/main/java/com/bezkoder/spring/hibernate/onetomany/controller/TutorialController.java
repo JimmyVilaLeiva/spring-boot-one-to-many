@@ -28,13 +28,13 @@ public class TutorialController {
 
   @Autowired
   TutorialRepository tutorialRepository;
-
+  // TODO: Create a service layer in between
   @GetMapping("/tutorials")
   public ResponseEntity<List<Tutorial>> getAllTutorials(@RequestParam(required = false) String title) {
     List<Tutorial> tutorials = new ArrayList<Tutorial>();
 
     if (title == null)
-      tutorialRepository.findAll().forEach(tutorials::add);
+      tutorialRepository.findAll().forEach(tutorials::add); // tutorial -> tutorials.add(tutorial)
     else
       tutorialRepository.findByTitleContaining(title).forEach(tutorials::add);
 

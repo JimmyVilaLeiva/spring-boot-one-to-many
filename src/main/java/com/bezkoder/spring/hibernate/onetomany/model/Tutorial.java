@@ -29,10 +29,13 @@ public class Tutorial {
     this.published = published;
   }
 
+  // TODO: Adding uuid
+
   public long getId() {
     return id;
   }
 
+  // TODO: Can we just use decorators @GETTERS and @SETTERS?
   public String getTitle() {
     return title;
   }

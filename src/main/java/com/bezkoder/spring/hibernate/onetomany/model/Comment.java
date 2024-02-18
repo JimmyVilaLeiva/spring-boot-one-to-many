@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "comments")
-public class Comment {
+public class  Comment {
   @Id
   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "comment_generator")
   private Long id;
