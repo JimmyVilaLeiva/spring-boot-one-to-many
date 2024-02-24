@@ -1,6 +1,7 @@
 package com.bezkoder.spring.hibernate.onetomany.Services;
 
 import com.bezkoder.spring.hibernate.onetomany.model.Task;
+import com.bezkoder.spring.hibernate.onetomany.model.User;
 import com.bezkoder.spring.hibernate.onetomany.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,8 +22,14 @@ public class TaskService {
         return taskRepository.findAll();
     }
 
+    public List<Task> getAllTasksByUser (User user){
+        return taskRepository.findAllByUser(user);
+    }
+
     public Task findTaskById(long id){
         return taskRepository.findById(id).orElse(null);
     }
+
+
 
 }
